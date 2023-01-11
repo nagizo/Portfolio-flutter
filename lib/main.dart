@@ -60,31 +60,32 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 178, 61, 61),
       appBar: AppBar(
         backgroundColor: Colors.black,
         actions: <Widget>[
           Padding(
-            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            padding:
+                const EdgeInsets.only(top: 20, right: 50, bottom: 0, left: 0),
             child: TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
-                textStyle: const TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold
-                ),
+                textStyle:
+                    const TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
               ),
               child: const Text('Top'),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            padding:
+                const EdgeInsets.only(top: 20, right: 50, bottom: 0, left: 0),
             child: TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
-                  fontSize: 24,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -92,13 +93,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            padding:
+                const EdgeInsets.only(top: 20, right: 50, bottom: 0, left: 0),
             child: TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
-                  fontSize: 24,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -106,13 +108,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            padding:
+                const EdgeInsets.only(top: 20, right: 100, bottom: 0, left: 0),
             child: TextButton(
               onPressed: () {},
               style: TextButton.styleFrom(
                 foregroundColor: Colors.white,
                 textStyle: const TextStyle(
-                  fontSize: 24,
+                  fontSize: 32,
                   fontWeight: FontWeight.bold,
                 ),
               ),
@@ -121,40 +124,71 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       ),
-      body: Container(
-        width: double.infinity,
-        color: Colors.black,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Text(
-              'My',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 128,
-                fontWeight: FontWeight.bold,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          SizedBox(
+            width: double.infinity,
+            // color: const Color.fromARGB(255, 0, 0, 0),
+            child: Padding(
+              padding:
+                  const EdgeInsets.only(top: 0, right: 0, bottom: 0, left: 200),
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: <Widget>[
+                  Positioned(
+                    top: -30 - 180,
+                    left: 350.0,
+                    width: 900,
+                    height: 800,
+                    child: Image.asset(
+                        '/Users/nagainagai/portfolio/images/img.jpg'),
+                  ),
+                  Positioned(
+                    top: 10.0 - 180,
+                    left: 300.0,
+                    width: 900,
+                    height: 800,
+                    child: Image.asset(
+                        '/Users/nagainagai/portfolio/images/img.jpg'),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: const [
+                      Text(
+                        'My',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 128,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      Text(
+                        'Design',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 128,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                      Text(
+                        'Portfolio',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 128,
+                          fontWeight: FontWeight.w900,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
               ),
-              ),
-            Text(
-              'Design',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 128,
-                fontWeight: FontWeight.bold,
-              ),
-              ),
-            Text(
-              'Portfolio',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 128,
-                fontWeight: FontWeight.bold,
-              ),
-              ),
-          ],
-        ),
-      )
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
