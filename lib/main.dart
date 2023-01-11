@@ -48,19 +48,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style = TextButton.styleFrom(
@@ -74,26 +61,34 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 0, 0),
+        title: const Text('AppBar'),
         actions: <Widget>[
           TextButton(
-            style: style,
             onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             child: const Text('Top'),
           ),
           TextButton(
-            style: style,
             onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             child: const Text('About'),
           ),
           TextButton(
-            style: style,
             onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             child: const Text('Portfolio'),
           ),
           TextButton(
-            style: style,
             onPressed: () {},
+            style: TextButton.styleFrom(
+              foregroundColor: Colors.white,
+            ),
             child: const Text('Contact'),
           ),
         ],
