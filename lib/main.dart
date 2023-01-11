@@ -61,38 +61,100 @@ class _MyHomePageState extends State<MyHomePage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        title: const Text('AppBar'),
+        backgroundColor: Colors.black,
         actions: <Widget>[
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              child: const Text('Top'),
             ),
-            child: const Text('Top'),
           ),
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: const Text('About'),
             ),
-            child: const Text('About'),
           ),
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: const Text('Portfolio'),
             ),
-            child: const Text('Portfolio'),
           ),
-          TextButton(
-            onPressed: () {},
-            style: TextButton.styleFrom(
-              foregroundColor: Colors.white,
+          Padding(
+            padding: const EdgeInsets.only(top:15, right: 30, bottom: 0, left: 0),
+            child: TextButton(
+              onPressed: () {},
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+                textStyle: const TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              child: const Text('Contact'),
             ),
-            child: const Text('Contact'),
           ),
         ],
       ),
+      body: Container(
+        width: double.infinity,
+        color: Colors.black,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Text(
+              'My',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 128,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+            Text(
+              'Design',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 128,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+            Text(
+              'Portfolio',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 128,
+                fontWeight: FontWeight.bold,
+              ),
+              ),
+          ],
+        ),
+      )
     );
   }
 }
